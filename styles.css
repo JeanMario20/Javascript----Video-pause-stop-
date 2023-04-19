@@ -1,0 +1,101 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    /* text-align: center; */
+    color: white;
+    font-size: 80px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* crear un estilo.
+un contenedor rectangular que tenga pause - stop
+un rectangulo de color que ira moviendo dentro del contenedor conforme lo presionamos
+tapara y mostrara los textos play y stop depiendo donde se encuentre de lugar */
+
+.button-container{
+    width: 130px;
+    height: 45px;
+    background-color: white;
+    /*  */
+    position: relative;
+    cursor: pointer;
+    top: 890px;
+    left: 40px;
+}
+
+.blue-switch{
+    display: inline-block;
+    width: 50%;
+    height: 45px;
+    background-color: blue;
+    position: absolute;
+    z-index: 2;
+}
+
+.text-On-Off {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.text{
+    position:relative;
+    margin-top: 13px;
+    z-index: 1;
+}
+
+.On {
+    left: 50%;
+}
+
+.slide {
+    left: 50%
+}
+
+/* fondo negro al video */
+header::after {
+    content :"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* background: var(--clr-white); */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    visibility: center;
+    visibility: visible;
+    z-index: 999;
+    /* transition: var(--transition); */
+}
+
+.hide-preloader {
+    z-index: -999;
+    visibility: hidden;
+}
+
